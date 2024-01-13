@@ -21,6 +21,9 @@ const Home = () => {
             });
             console.log(response.data);
             setCoupons(response.data);
+
+            setLatitude('');
+            setLongitude('');
         } catch (error) {
             console.error(error);
         }
@@ -40,6 +43,8 @@ const Home = () => {
             const response = await axios.post('http://localhost:8000/api/coupons', newCouponData);
             console.log('Coupon created:', response.data);
 
+            setNewCouponTitle('');
+            setNewCouponAddress('');
             // Optionally, update the UI or display a success message
         } catch (error) {
             console.error('Error creating coupon:', error);
