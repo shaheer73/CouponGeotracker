@@ -55,7 +55,7 @@ const Home = () => {
     return (
         <div className="container">
             <div className="form-container">
-                <h1>Radar Coupon App</h1>
+                <h1>Coupon Geotracker</h1>
                 <form onSubmit={handleLocationSubmit} className="form">
                     <label className="form-label">
                         Enter your latitude:
